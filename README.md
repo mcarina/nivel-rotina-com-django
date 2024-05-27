@@ -13,3 +13,22 @@
 > - Django 5
 > - Postgres
 > - Outras dependências podem ser encontradas no arquivo requirements.txt.
+
+## Configuração
+> Banco de dados com postgresql,
+   - configure o arquivo .env;
+   - certifique-se de configurar o settings.py
+   
+```bash
+    'NAME': 'nomedobanco',
+    'USER' : 'seuuser',
+    'PASSWORD': ' ',
+    'HOST': 'localhost',
+    'PORT': '5432',
+
+```
+>- Faça o migrate
+
+```bash
+python manage.py migrate
+python man
