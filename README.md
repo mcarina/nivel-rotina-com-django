@@ -30,5 +30,5 @@
 >- Faça o migrate
 
 ```bash
+python manage.py makemigrate
 python manage.py migrate
-python man
