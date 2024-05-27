@@ -1,8 +1,8 @@
-from rest_framework.generics import ListAPIView
+from rest_framework.viewsets import ModelViewSet
 from .models import *
 from .serializer import *
 
-class UsuariosListView(ListAPIView):
+class UsuariosViewSet(ModelViewSet):
     queryset = Usuarios.objects.all()
     serializer_class = UsuariosSerializer
 
@@ -12,22 +12,22 @@ class UsuariosListView(ListAPIView):
         queryset = queryset.select_related('nivel_acesso')
         return queryset
 
-class RotinasListView(ListAPIView):
+class RotinasViewSet(ModelViewSet):
     queryset = Rotinas.objects.all()
     serializer_class = RotinasSerializer
 
-class DepartamentosListView(ListAPIView):
+class DepartamentosViewSet(ModelViewSet):
     queryset = Departamentos.objects.all()
     serializer_class = DepartamentosSerializer
 
-class UsuariosRotinaListView(ListAPIView):
+class UsuariosRotinaViewSet(ModelViewSet):
     queryset = UsuariosRotina.objects.all()
     serializer_class = UsuariosRotinaSerializer
 
-class EtapasAprovacoesListView(ListAPIView):
+class EtapasAprovacoesViewSet(ModelViewSet):
     queryset = EtapasAprovacoes.objects.all()
     serializer_class = EtapasAprovacoesSerializer
 
-class TabelasListView(ListAPIView):
+class TabelasViewSet(ModelViewSet):
     queryset = Tabelas.objects.all()
     serializer_class = TabelasSerializer
